@@ -1,47 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charity: water — Awareness Isn't Enough</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Free fonts (similar vibe to Avenir/Proxima) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">charity: water</span>
+    </div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    <nav class="nav">
+      <a href="#story">Story</a>
+      <a href="#impact">Impact</a>
+      <a class="nav-cta" href="#donate">Donate</a>
+    </nav>
+  </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="donate">
+      <div class="hero-inner">
+        <!-- LEFT (text) -->
+        <div class="hero-text">
+          <p class="eyebrow">Clean water changes everything.</p>
+
+          <h1>
+            <span class="h1-strong">AWARENESS</span>
+            <span class="h1-muted">ISN’T</span>
+            <span class="h1-strong">ENOUGH</span>
+          </h1>
+
+          <p class="subhead">
+            <strong>Stop watching. Start funding</strong> clean water projects you can see transforming lives.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.charitywater.org/" target="_blank" rel="noreferrer">
+              DONATE NOW
+              <span class="btn-small">Make your impact real</span>
+            </a>
+
+            <a class="btn btn-ghost" href="#story">Learn more</a>
+          </div>
+
+          <p class="microcopy">
+            Built for students: small gifts add up fast — even $10 helps.
+          </p>
         </div>
+
+        <!-- RIGHT (photo + QR overlay) -->
+        <div class="hero-card">
+          <div class="photo-wrap">
+            <img src="image.png" alt="A clean water project in progress" />
+
+             
+
+    <!-- STORY -->
+    <section class="section" id="story">
+      <div class="section-inner">
+        <h2>Your donation becomes a real project.</h2>
+        <p>
+          charity: water funds clean water solutions and shares project updates so you can see the impact.
+          This page is designed to make it easy for college students to take action quickly.
+        </p>
+
+        <div class="cards">
+          <article class="mini-card">
+            <h3>Transparent impact</h3>
+            <p>Track real projects and see updates, photos, and locations.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3>Small gifts matter</h3>
+            <p>Student-sized donations add up to life-changing clean water access.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3>Share &amp; inspire</h3>
+            <p>Invite friends to join in — awareness + action = change.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+    <!-- IMPACT / CTA -->
+    <section class="section section-accent" id="impact">
+      <div class="section-inner impact">
+        <div>
+          <h2>Turn empathy into action.</h2>
+          <p>
+            If you felt something when you learned about the water crisis, this is your next step.
+            Donate, share, or start a campus challenge.
+          </p>
+        </div>
+
+        <div class="impact-actions">
+          <a class="btn btn-primary" href="https://www.charitywater.org/" target="_blank" rel="noreferrer">
+            Donate today
+            <span class="btn-small">Fast • Simple • Real impact</span>
+          </a>
+
+          <button class="btn btn-ghost" type="button" onclick="copyLink()">
+            Copy this page link
+          </button>
+
+          <p class="microcopy" id="copy-status" aria-live="polite"></p>
+        </div>
+      </div>
     </section>
+  </main>
+
+  <footer class="footer">
+    <p>Student campaign landing page mockup → built with HTML + CSS.</p>
+  </footer>
+
+  <script>
+    function copyLink() {
+      const status = document.getElementById("copy-status");
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => status.textContent = "Link copied!")
+        .catch(() => status.textContent = "Copy failed — copy the URL from the address bar.");
+    }
+  </script>
 </body>
-</html>
+</html
